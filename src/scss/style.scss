@@ -1,0 +1,24 @@
+/* Vendors*/
+@import './bower/include-media/dist/include-media';
+
+/* Vendors */
+@import 'vendors/fonts';
+@import 'vendors/icons';
+
+/* Base modules*/
+@import 'base/variables';
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/helpers';
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/forms';
+
+/* Components */
+@import 'components/visual';
+
+/* Layouts */
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/common';
+
