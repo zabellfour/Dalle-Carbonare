@@ -11,7 +11,7 @@ $base-font-serif: 'UtopiaStd','Times New Roman', 'Times', 'Baskerville', 'Georgi
 // Body
 $base-text-color: $white !default;
 $base-background-color: $dark-green !default;
-$base-font-size: 11px !default;
+$base-font-size: 12px !default;
 $base-line-height: 2 !default;
 $base-font-family: $base-font-sans-serif !default;
 
@@ -35,14 +35,14 @@ $form-element-focus-border-color: $black !default;
 $placeholder-color: $gray !default;
 
 // Headers
-$h1-font-size: 30px !default;
-$h2-font-size: 27px !default;
-$h3-font-size: 24px !default;
-$h4-font-size: 21px !default;
+$h1-font-size: 40px !default;
+$h2-font-size: 40px !default;
+$h3-font-size: 32px !default;
+$h4-font-size: 26px !default;
 $h5-font-size: 17px !default;
 $h6-font-size: 15px !default;
 
-$headings-font-family: inherit !default;
+$headings-font-family: $base-font-serif;
 $headings-color: inherit !default;
 
 

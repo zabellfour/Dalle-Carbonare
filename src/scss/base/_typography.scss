@@ -1,5 +1,22 @@
 // Typography
 
+$base-font-size: 11px !default;
+
+// Headers
+$h1-font-size: 40px !default;
+$h2-font-size: 40px !default;
+$h3-font-size: 32px !default;
+$h4-font-size: 26px !default;
+$h5-font-size: 17px !default;
+$h6-font-size: 15px !default;
+
+$headings-font-family: $base-font-serif;
+$headings-color: inherit !default;
+
+.typography-block {
+  margin-top: 30px;
+}
+
 h1, .h1,
 h2, .h2,
 h3, .h3,
@@ -8,25 +25,34 @@ h5, .h5,
 h6, .h6,
 .h {
   font-family: $headings-font-family;
-  font-weight: bold;
   margin: 0 0 0.5em;
   color: $headings-color;
 }
 
 h1, .h1 {
   font-size: $h1-font-size;
+  font-weight: normal;
+  line-height: 60px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
 h2, .h2 {
-  font-size: $h2-font-size;
+  @extend .h1;
 }
 
 h3, .h3 {
   font-size: $h3-font-size;
+  font-weight: normal;
+  font-style: italic;
 }
 
 h4, .h4 {
   font-size: $h4-font-size;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 4px;
+  line-height: 38px;
 }
 
 h5, .h5 {
@@ -47,4 +73,14 @@ a {
   &:focus {
     text-decoration: none;
   }
+}
+.small-h1 {
+  @extend .h1;
+  font-size: 18px;
+  letter-spacing: 8px;
+}
+
+.small-h2 {
+  @extend .h2;
+  font-size: 15px;
 }
