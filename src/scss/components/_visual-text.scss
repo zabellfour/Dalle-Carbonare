@@ -1,0 +1,16 @@
+.visual-text{
+	display: flex;
+	.col-lg{
+		width: 60%;
+		background-color: rgba(#033030,.75);
+	}
+	.col-sm{
+		width: 40%;
+		display: flex;
+	}
+	.img-box{
+		height: 100%;
+		width: 100%;
+		background-size: cover;
+	}
+}	
