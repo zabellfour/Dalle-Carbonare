@@ -35,8 +35,6 @@ function initMobileNav() {
 	});
 }
 
-
-
 /*
  * Simple Mobile Navigation
  */
@@ -143,21 +141,7 @@ function initMobileNav() {
 	};
 }(jQuery));
 
-// Google-Map
-// function initialize() {
-//   var myCenter=new google.maps.LatLng(43.600827, 1.441230);
-//   var mapProp = {
-//     center: myCenter,
-//     zoom:16,
-//     scrollwheel: false,
-//     mapTypeId:google.maps.MapTypeId.ROADMAP
-//   };
-//   var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
-
-// }
-// google.maps.event.addDomListener(window, 'load', initialize);
-// End Google-map
-try {
+// Google-map
 
   var point = {
     lat: 43.600827,
@@ -220,10 +204,6 @@ try {
     });
 
   }
-
   initialize();
-
-} catch (e) {
-  alert(e);
-}
-
+  
+// End-Google-map
