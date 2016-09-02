@@ -13,9 +13,19 @@ import HP from './modules/helpers';
 jQuery(function(){
 	
 	initMobileNav();
-	
+	initOpenClose();
 });
 
+function initOpenClose() {
+	jQuery('.link-list .drop-down').openClose({
+		activeClass: 'active',
+		opener: '.subnav-drop-opener',
+		slider: '.drop-down-content',
+		animSpeed: 300,
+		effect: 'slide',
+		hideOnClickOutside: true
+	});
+}
 function initMobileNav() {
 	jQuery('body').mobileNav({
 		hideOnClickOutside: true,
@@ -24,6 +34,9 @@ function initMobileNav() {
 		menuDrop: '.nav-drop'
 	});
 }
+
+
+
 /*
  * Simple Mobile Navigation
  */

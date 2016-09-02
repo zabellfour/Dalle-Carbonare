@@ -52,11 +52,9 @@
 			&.active a {
 				position: relative;
 				color: $brown;
-				 @include media('<tablet') {
+				@include media('<tablet') {
 					color: $white;
-				 
-				 }
-						
+				}
 				&:after {
 					content: '';
 					position: absolute;
@@ -65,12 +63,11 @@
 					right: 0;
 					height: 2px;
 					background-color: $brown;
-					 @include media('<tablet') {
-					background-color: $white;
-					bottom: -5px;
-					 height: 1px;
-					 }
-							
+					@include media('<tablet') {
+						background-color: $white;
+						bottom: -5px;
+						height: 1px;
+					}
 				}
 			}
 		}
@@ -134,11 +131,9 @@
 		}
 		.link-list {
 			padding-top: 15px;
-			 @include media('<tablet') {
+			@include media('<tablet') {
 				padding-top: 0;
-			 
-			 }
-					
+			}
 		}
 	}
 	.nav-left {
@@ -156,11 +151,9 @@
 			text-transform: uppercase;
 			text-decoration: none;
 			transition: color .3s;
-			 @include media('<tablet') {
+			@include media('<tablet') {
 				font-size: 14px;
-			 
-			 }
-					
+			}
 			&:hover {
 				color: $brown;
 			}
@@ -223,4 +216,34 @@
 	&:after {
 		top: 70%;
 	}
+}
+
+.drop-down {
+	position: relative;
+	&-content {
+		@extend %listreset;
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		top: 100%;
+		left: -20px;
+		transition: opacity .3s, visibility .3s;
+		padding: 20px;
+		li{
+			a {
+				font-size: 11px;
+			}
+		}
+		@include media('<tablet') {
+			position: static;
+			opacity: 1;
+			visibility: visible;
+			padding: 0;
+		}
+		.drop-down:hover & {
+		opacity: 1;
+		visibility: visible;
+	}
+	}
+	
 }
