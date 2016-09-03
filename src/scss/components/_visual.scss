@@ -18,39 +18,85 @@
 		}
 		.header-holder {
 			background-color: $white;
-			padding: 35px 20px;
+			padding: 25px 20px;
 			color: $dark-green;
 			text-align: center;
+			@include media('<desktop') {
+				padding: 15px 10px;
+			}
+			@include media('<tablet') {
+				padding: 15px 5px 5px;
+			}
 			.small {
 				margin-bottom: 0;
 				font-size: 18px;
 				text-transform: uppercase;
-				letter-spacing: 5px;
+				letter-spacing: 7px;
 				font-family: $base-font-serif;
 				font-weight: 400;
+				@include media('<desktop') {
+					letter-spacing: 4px;
+					font-size: 18px;
+				}
+				@include media('<tablet') {
+					line-height: 2;
+					font-size: 16px;
+				}
 			}
 		}
 	}
-	.scroll-btn{
+	&-static {
+		height: auto;
+		min-height: 0;
+		display: block;
+		position: relative;
+		img{
+			vertical-align: top;	
+		}
+		.visual-header {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;	
+			padding-top: 111px;
+			h1{
+				text-transform: none;	
+				font-size: 70px;	
+				margin-bottom: 15px;	
+			}
+			.small-h2{
+				font-size: 	14px;
+				letter-spacing: 6px;
+			}
+		}
+	}
+	.center-holder {
+		padding-bottom: 58px;
+	}
+	.scroll-btn {
 		position: absolute;
 		top: -20px;
 		left: 50%;
-		transform:translateX(-50%);
-		width:125px;
+		transform: translateX(-50%);
+		width: 125px;
 		height: 40px;
 		font-size: 28px;
-
 		text-align: center;
 		color: $white;
 		background-color: $brown;
 		opacity: 1;
-		transition:opacity .5s;
-				display: inline-block;
-				text-decoration: none;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-		&:hover{
+		transition: opacity .5s;
+		display: inline-block;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include media('<tablet') {
+			height: 25px;
+			top: -15px;
+		}
+		&:hover {
 			opacity: .9;
 		}
 	}

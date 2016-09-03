@@ -4,7 +4,15 @@
 	margin: 0 auto;
 	@extend %clearfix;
 }
-
+.content-holder{
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	padding-bottom: 80px;
+}
 .resize-active * {
 	transition: none !important;
+}
+.nav-active{
+	overflow: hidden;
 }

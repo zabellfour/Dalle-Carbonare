@@ -1,0 +1,156 @@
+#footer {
+	background-color: $dark-green;
+	padding: 48px 0 8px;
+	color: $white;
+	a {
+		color: $white;
+		transition: color .3s;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: 11px;
+		&:hover {
+			color: $brown;
+		}
+	}
+	.nav-drop {
+		@include media('<tablet') {
+			height: 0;
+			overflow: hidden;
+			.footer-nav-active & {
+				height: auto;
+			}
+		}
+	}
+	.nav-opener {
+		margin-top: 0;
+	}
+	.social {
+		float: right;
+		color: $brown;
+		@include media('<tablet') {
+			margin-right: 20px;
+		}
+		&:hover {
+			color: $white;
+		}
+	}
+	.footer-nav {
+		@extend %clearfix;
+		padding-bottom: 41px;
+		border-bottom: 1px solid rgba($white, .2);
+		margin-bottom: 10px;
+		ul {
+			@extend %listreset;
+			float: left;
+		}
+		li {
+			display: inline-block;
+			padding-right: 34px;
+			@include media('<desktop') {
+				padding-right: 10px;
+			}
+			@include media('<tablet') {
+				display: block;
+			}
+		}
+		a {
+			letter-spacing: 1px;
+		}
+	}
+	.lang-list li {
+		padding-left: 7px;
+		&.active a {
+			color: $brown;
+		}
+	}
+	.contact-list {
+		@extend %listreset;
+		a {
+			text-decoration: none;
+			color: $white;
+		}
+	}
+	.footer-columns {
+		@extend %clearfix;
+		border-bottom: 1px solid rgba($white, .2);
+		padding-top: 41px;
+		letter-spacing: 0.5px;
+		padding-bottom: 47px;
+		font-size: 12px;
+		margin-bottom: 17px;
+		@include media('<tablet') {
+			text-align: right;
+		}
+		a {
+			font-size: 12px;
+			text-transform: none;
+		}
+		.col {
+			width: 240px;
+			float: left;
+			text-align: left;
+			@include media('<tablet') {
+				width: 50%;
+				margin-bottom: 20px;
+			}
+			@include media('<phone') {
+				width: 100%;
+				text-align: right;
+			}
+			.text-holder {
+				margin-bottom: 20px;
+			}
+			p {
+				margin-bottom: 5px;
+			}
+			&:nth-child(2) {
+				width: 270px;
+				@include media('<tablet') {
+					float: right;
+					text-align: right;
+					max-width: 200px;
+				}
+			}
+		}
+		.logo-col {
+			float: right;
+			width: auto;
+			padding-top: 10px;
+			@include media('<tablet') {
+				margin-top: 40px;
+				text-align: center;
+				width: 100%;
+			}
+		}
+		.col-title {
+			display: block;
+			margin-bottom: 25px;
+		}
+	}
+	.copy {
+		@extend %clearfix;
+		color: rgba($white, .4);
+		font-size: 11px;
+		.text {
+			width: 90%;
+			display: inline-block;
+			letter-spacing: 0.4px;
+			@include media('<phone') {
+				width: 80%;
+			}
+		}
+		a {
+			color: rgba($white, .4);
+			text-transform: none;
+			&:hover {
+				color: $white;
+			}
+		}
+		.copy-link {
+			float: right;
+			&:hover {
+				opacity: .8;
+			}
+		}
+	}
+}
