@@ -1,4 +1,4 @@
-.header {
+#header {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -72,20 +72,7 @@
 			}
 		}
 	}
-	.lang-list {
-		@extend %listreset;
-		padding-top: 6px;
-		text-align: right;
-		li {
-			display: inline-block;
-			padding: 0 6px;
-			border-right: 1px solid rgba($white, .1);
-			&:last-child {
-				padding-right: 0;
-				border-right: none;
-			}
-		}
-	}
+	
 	.logo-holder {
 		width: 125px;
 		height: 130px;
@@ -161,6 +148,21 @@
 	}
 }
 
+.lang-list {
+		@extend %listreset;
+		padding-top: 6px;
+		text-align: right;
+		li {
+			display: inline-block;
+			padding: 0 6px;
+			border-right: 1px solid rgba($white, .1);
+			&:last-child {
+				padding-right: 0;
+				border-right: none;
+			}
+		}
+	}
+
 .nav-opener {
 	display: none;
 	float: right;
@@ -229,7 +231,7 @@
 		left: -20px;
 		transition: opacity .3s, visibility .3s;
 		padding: 20px;
-		li{
+		li {
 			a {
 				font-size: 11px;
 			}
@@ -241,9 +243,8 @@
 			padding: 0;
 		}
 		.drop-down:hover & {
-		opacity: 1;
-		visibility: visible;
+			opacity: 1;
+			visibility: visible;
+		}
 	}
-	}
-	
 }

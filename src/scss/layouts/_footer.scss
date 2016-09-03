@@ -1,0 +1,131 @@
+#footer {
+	background-color: $dark-green;
+	padding: 45px 0 8px;
+	color: $white;
+	a {
+		color: $white;
+		transition: color .3s;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: 11px;
+		&:hover {
+			color: $brown;
+		}
+	}
+	.nav-drop {
+		@include media('<tablet') {
+			height: 0;
+			overflow: hidden;	
+			.footer-nav-active &{
+				height: auto;
+			}
+		}
+	}
+	.nav-opener{
+		margin-top: 0;
+	}
+	.social {
+		float: right;
+		color: $brown;
+		 @include media('<tablet') {
+				margin-right: 20px;
+		 
+		 }
+					
+		&:hover {
+			color: $white;
+		}
+	}
+	.footer-nav {
+		@extend %clearfix;
+		padding-bottom: 30px;
+		border-bottom: 1px solid rgba($white, .2);
+		margin-bottom: 10px;
+		ul {
+			@extend %listreset;
+			float: left;
+		}
+		li {
+			display: inline-block;
+			padding-right: 20px;
+			 @include media('<tablet') {
+			display: block;	
+			 
+			 }
+						
+		}
+	}
+	.contact-list {
+		@extend %listreset;
+		a {
+			text-decoration: none;
+			color: $white;
+		}
+	}
+	.footer-columns {
+		@extend %clearfix;
+		border-bottom: 1px solid rgba($white, .2);
+		padding-top: 50px;
+		padding-bottom: 50px;
+		font-size: 12px;
+		margin-bottom: 10px;
+		 @include media('<tablet') {
+		text-align: right;	
+		 
+		 }
+					
+		.col {
+			width: 250px;
+			float: left;
+			 @include media('<tablet') {
+			width: 100%;
+			margin-bottom: 20px;	
+			 
+			 }
+						
+			.text-holder {
+				margin-bottom: 20px;
+			}
+			p {
+				margin-bottom: 5px;
+			}
+		}
+		.logo-col {
+			float: right;
+			width: auto;
+			 @include media('<tablet') {
+					
+			 margin-top: 40px;	
+			 }
+						
+		}
+		.col-title {
+			display: block;
+			margin-bottom: 30px;
+		}
+	}
+	.copy {
+		@extend %clearfix;
+		color: rgba($white, .4);
+		font-size: 11px;
+		.text {
+			width: 90%;
+			display: inline-block;
+			@include media('<phone') {
+				width: 80%;
+			}
+		}
+		a {
+			color: rgba($white, .4);
+			&:hover {
+				color: $white;
+			}
+		}
+		.copy-link {
+			float: right;
+			&:hover {
+				opacity: .8;
+			}
+		}
+	}
+}

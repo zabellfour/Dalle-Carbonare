@@ -1,16 +1,156 @@
-.visual-text{
+.visual-large {
 	display: flex;
-	.col-lg{
-		width: 60%;
-		background-color: rgba(#033030,.75);
+	overflow: hidden;
+	margin-bottom: 40px;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	@include media('<tablet') {
+		margin-bottom: 15px;
 	}
-	.col-sm{
+	h1 {
+		color: $brown;
+	}
+	@include media('<tablet') {
+		flex-direction: column-reverse;
+	}
+	.text-holder {
+		width: 60%;
+		background-color: rgba(#033030, .75);
+		padding: 75px 70px;
+		@include media('<tablet') {
+			width: 100%;
+			padding: 20px;
+		}
+	}
+	.img-holder {
 		width: 40%;
 		display: flex;
+		@include media('<tablet') {
+			width: 100%;
+			height: 300px;
+		}
 	}
-	.img-box{
+	.img-box {
 		height: 100%;
 		width: 100%;
 		background-size: cover;
+		background-position: 50% 50%;
 	}
-}	
+	img{
+		vertical-align: top;
+	}
+}
+
+.visual-light {
+	@extend .visual-large;
+	margin-bottom: 50px;
+	.text-holder {
+		background-color: $cream;
+		position: relative;
+		&:after {
+			content: '';
+			@include triangle(26px 16px, $white, right);
+			position: absolute;
+			top: 90px;
+			left: 0;
+			 @include media('<tablet') {
+				bottom:-5px;
+				top: auto;
+				left: 30px;
+				transform:rotate(270deg);
+			 
+			 }
+					
+		}
+	}
+	h1 {
+		color: $dark-green;
+	}
+}
+
+.visual-small {
+	@extend .visual-large;
+	@include media('<tablet') {
+		flex-direction: column;
+	}
+	.text-holder {
+		width: 40%;
+		background: transparent;
+		padding: 60px 20px 60px 0;
+		@include media('<tablet') {
+			width: 100%;
+			padding: 15px 10px;
+		}
+	}
+	.img-holder {
+		width: 60%;
+		@include media('<tablet') {
+			width: 100%;
+			height: 200px;
+		}
+	
+				
+	}
+	h1 {
+		color: $white;
+	}
+	.btn {
+		margin: -30px 40px 0 0;
+		@include media('<tablet') {
+			margin: -70px 0 0 20px;
+		}
+	}
+}
+
+.stroke {
+	position: relative;
+	padding-left: 81px;
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: calc(50% - 1px);
+		height: 2px;
+		width: 53px;
+		background-color: $brown;
+		display: block;
+	}
+}
+
+.separeted-block{
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 87px;
+	.heading-holder{
+		width: 33%;
+		border-right: 2px solid rgba($white, .9);
+		 @include media('<tablet') {
+		border: none;
+		width: 100%;
+
+		 
+		 }
+				
+		h1{
+			margin-bottom: 0;
+			 @include media('<desktop') {
+				font-size: 26px;
+			 
+			 }
+					
+		}
+	}
+	.text-holder{
+		width: 67%;
+		padding-left: 55px;
+		font-size: 18px;
+		font-family: $base-font-serif;
+		font-style: italic;
+			 @include media('<tablet') {
+		
+		width: 100%;
+	padding: 0;
+		 
+		 }
+	}
+}

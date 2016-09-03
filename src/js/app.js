@@ -18,7 +18,7 @@ jQuery(function(){
 
 function initOpenClose() {
 	jQuery('.link-list .drop-down').openClose({
-		activeClass: 'active',
+		activeClass: 'active-drop',
 		opener: '.subnav-drop-opener',
 		slider: '.drop-down-content',
 		animSpeed: 300,
@@ -29,10 +29,11 @@ function initOpenClose() {
 function initMobileNav() {
 	jQuery('body').mobileNav({
 		hideOnClickOutside: true,
-		menuActiveClass: 'nav-active',
-		menuOpener: '.nav-opener',
-		menuDrop: '.nav-drop'
+		menuActiveClass: 'footer-nav-active',
+		menuOpener: '#footer .nav-opener',
+		menuDrop: '#footer .nav-drop'
 	});
+
 }
 
 

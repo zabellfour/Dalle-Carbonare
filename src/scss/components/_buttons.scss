@@ -1,0 +1,33 @@
+.btn {
+	font-family: $base-font-serif;
+	font-style: italic;
+	font-size: 14px;
+	color: $white;
+	width: 180px;
+	height: 60px;
+	text-align: center;
+	line-height:1px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 5px 30px;
+	
+	text-decoration: none;
+	transition:opacity .3s;
+			opacity: 1;
+			&:hover{
+				opacity: .8;
+			}
+	i{
+		font-size: 25px;
+	}
+	&-brown {
+		background-color: $brown;
+	}
+	&-green {
+		background-color: $dark-green;
+	}
+	&-cream{
+		background-color: $cream;
+	}
+}

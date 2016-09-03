@@ -1,0 +1,92 @@
+.thumb-holder {
+	text-align: center;
+	padding: 30px 0 50px;
+	margin-bottom: 60px;
+	.heading-holder {
+		position: relative;
+		max-width: 600px;
+		margin: 0 auto 40px;
+		.small-h2 {
+			color: $brown;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			top: -100px;
+			height: 100px;
+			display: block;
+			left: 50%;
+			width: 2px;
+			background-color: $white;
+		}
+	}
+	.thumb-wrapper {
+		text-align: left;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		.thumb {
+			width: 31%;
+			display: block;
+			overflow: hidden;
+			background-color: $white;
+			margin-bottom: 30px;
+			color: $dark-green;
+			text-decoration: none;
+			transition:background-color .3s,color .3s;
+			&:hover {
+				background-color: $dark-green;
+				color: $white;
+				.img-holder {
+					position: relative;
+					&:after {
+						opacity: 1;
+						background-position: 50% 50%;
+					}
+				}
+			}
+			@include media('<tablet') {
+				width: 60%;
+				margin: 0 auto 50px;
+			}
+				 @include media('<phone') {
+			width: 100%;
+		  
+		 }
+			h4 {
+				color: $brown;
+				@include media('<desktop') {
+					font-size: 18px;
+				}
+			}
+			img {
+				vertical-align: top;
+				width: 100%;
+				height: auto;
+			}
+		}
+		.img-holder {
+			position: relative;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: rgba($dark-green, .6);
+				background-image: url('../images/logo.png');
+				background-position: 50% -50%;
+				opacity: 0;
+				background-repeat: no-repeat;
+				transition:opacity .3s, background-position 0.7s;
+			}
+		}
+		.text-holder {
+			padding: 35px 26px;
+			@include media('<desktop') {
+				padding: 20px 20px;
+			}
+		}
+	}
+}
