@@ -6,19 +6,19 @@
 	width: 180px;
 	height: 60px;
 	text-align: center;
-	line-height:1px;
+	line-height: 1px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
-	padding: 5px 30px;
-	
+	padding: 5px 16px 5px 30px;
 	text-decoration: none;
-	transition:opacity .3s;
-			opacity: 1;
-			&:hover{
-				opacity: .8;
-			}
-	i{
+	transition: opacity .3s;
+	opacity: 1;
+	letter-spacing: -.1px;
+	&:hover {
+		opacity: .8; 
+	}
+	i {
 		font-size: 25px;
 	}
 	&-brown {
@@ -27,7 +27,7 @@
 	&-green {
 		background-color: $dark-green;
 	}
-	&-cream{
+	&-cream {
 		background-color: $cream;
 	}
 }

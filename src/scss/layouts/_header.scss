@@ -10,6 +10,8 @@
 		transition: transform 0.4s, opacity 0.4s;
 		z-index: 100;
 		@include media('<tablet') {
+			max-height: 100vh;
+			overflow: auto;
 			display: block;
 			opacity: 0;
 			position: absolute;
@@ -29,7 +31,7 @@
 	}
 	.link-list {
 		@extend %listreset;
-		padding-top: 42px;
+		padding-top: 45px;
 		display: flex;
 		justify-content: space-between;
 		border-bottom: 1px solid rgba($white, .2);
@@ -72,7 +74,6 @@
 			}
 		}
 	}
-	
 	.logo-holder {
 		width: 125px;
 		height: 130px;
@@ -117,7 +118,7 @@
 			flex-direction: column-reverse;
 		}
 		.link-list {
-			padding-top: 15px;
+			padding-top: 17px;
 			@include media('<tablet') {
 				padding-top: 0;
 			}
@@ -138,30 +139,42 @@
 			text-transform: uppercase;
 			text-decoration: none;
 			transition: color .3s;
+			letter-spacing: 1px;
 			@include media('<tablet') {
 				font-size: 14px;
 			}
 			&:hover {
 				color: $brown;
+				 @include media('<tablet') {
+						color: $dark-green;
+				 
+				 }
+							
 			}
 		}
 	}
 }
 
 .lang-list {
-		@extend %listreset;
-		padding-top: 6px;
-		text-align: right;
-		li {
-			display: inline-block;
-			padding: 0 6px;
-			border-right: 1px solid rgba($white, .1);
-			&:last-child {
-				padding-right: 0;
-				border-right: none;
+	@extend %listreset;
+	padding-top: 4px;
+	text-align: right;
+	li {
+		display: inline-block;
+		padding: 0 5px;
+		border-right: 1px solid rgba($white, .1);
+		&:last-child {
+			padding-right: 0;
+			border-right: none;
+		}
+		&.active a {
+			color: $brown;
+			@include media('<tablet') {
+				color: $dark-green;
 			}
 		}
 	}
+}
 
 .nav-opener {
 	display: none;
