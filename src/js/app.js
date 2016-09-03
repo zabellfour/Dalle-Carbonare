@@ -33,6 +33,12 @@ function initMobileNav() {
 		menuOpener: '.nav-opener',
 		menuDrop: '.nav-drop'
 	});
+	jQuery('body').mobileNav({
+  	hideOnClickOutside: true,
+  	menuActiveClass: 'map-active',
+  	menuOpener: '.map-opener',
+ 	menuDrop: '.nav-drop'
+ });
 }
 
 
@@ -372,7 +378,7 @@ function initMobileNav() {
       zoom: 16,
       center: myLatLng,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
-      scrollwheel: false,
+      scrollwheel: true,
       disableDefaultUI:true
     });
     var myMarker = new google.maps.Marker({
