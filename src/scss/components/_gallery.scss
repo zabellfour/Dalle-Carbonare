@@ -1,5 +1,11 @@
 .default-carousel {
-	margin-bottom: 30px;
+	margin-bottom: 46px;
+	@include media('<desktop') {
+		margin-bottom: 30px;
+	}
+	@include media('<tablet') {
+		margin-bottom: 20px;
+	}
 	.slide {
 		position: relative;
 		text-align: center;
@@ -11,20 +17,16 @@
 		.slide-heading {
 			position: absolute;
 			bottom: 0;
-			padding: 30px 10px;
+			padding: 26px 10px 17px;
 			background-color: rgba($dark-green, .8);
 			left: 0;
 			right: 0;
-			 @include media('<desktop') {
-					padding: 20px 10px;
-			 
-			 }
-			  @include media('<tablet') {
-			 		padding: 10px;
-			  
-			  }
-			 			
-						
+			@include media('<desktop') {
+				padding: 20px 10px;
+			}
+			@include media('<tablet') {
+				padding: 10px;
+			}
 			h6 {
 				font-family: $base-font-serif;
 				font-size: 18px;
@@ -53,13 +55,11 @@
 			@include media('<desktop') {
 				left: 0;
 			}
-			 @include media('<tablet') {
-					height: 70px;
-					line-height: 70px;
-					width: 25px;
-			 
-			 }
-						
+			@include media('<tablet') {
+				height: 70px;
+				line-height: 70px;
+				width: 25px;
+			}
 			&:hover {
 				opacity: .7;
 			}
@@ -72,11 +72,8 @@
 			right: -13px;
 			@include media('<desktop') {
 				right: 0;
-			} @include media('<tablet') {
-			
-			 
-			 }
-						
+			}
+			@include media('<tablet') {}
 			left: auto;
 			transform:rotate(0deg);
 		}

@@ -1,0 +1,49 @@
+.instrument-navigation {
+
+
+
+	position: relative;z-index: 100;
+	padding: 0 10px;
+	ul {
+		text-transform: uppercase;
+		@extend %listreset;
+		display: flex;
+		margin-top: -60px;
+		justify-content: space-between;
+		@include media('<phone') {
+
+		}
+		li {
+			width: 18%;
+			a {
+				min-width: 0;
+				width: 100%;
+				padding: 5px 15px;
+				margin-right: 0;
+				font-size: 12px;
+				font-style: normal;
+				font-family: $base-font-serif;
+				@include media('<desktop') {
+					font-size: 12px;
+					padding: 5px 10px;
+				}
+				@include media('<tablet') {
+					font-size: 10px;
+					flex-direction: column;
+				}
+				span {
+					@include media('<tablet') {
+						display: block;
+						margin-top: 10px;
+					}
+				}
+			}
+			i {
+				font-size: 25px;
+				@include media('<desktop') {
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}
