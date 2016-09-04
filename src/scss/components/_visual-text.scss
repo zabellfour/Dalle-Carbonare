@@ -43,15 +43,22 @@
 	}
 	.img-holder {
 		width: 40%;
-		display: flex;
+		min-height: 100%;
+		display: flex;	 
+		&:after{
+			content: '';
+			height:100%;
+
+		}
 		@include media('<tablet') {
 			width: 100%;
 			height: 300px;
 		}
 	}
 	.img-box {
-		height: 100%;
-		width: 100%;
+		display: flex;	
+width: 100%;
+min-height: 100%; 
 		background-size: cover;
 		background-position: 50% 50%;
 	}

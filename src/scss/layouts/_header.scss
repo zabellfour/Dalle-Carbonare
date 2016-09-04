@@ -4,7 +4,6 @@
 	top: 0;
 	left: 0;
 	right: 0;
-
 	.nav-drop {
 		display: flex;
 		justify-content: space-between;
@@ -146,11 +145,9 @@
 			}
 			&:hover {
 				color: $brown;
-				 @include media('<tablet') {
-						color: $dark-green;
-				 
-				 }
-							
+				@include media('<tablet') {
+					color: $dark-green;
+				}
 			}
 		}
 	}
@@ -245,6 +242,12 @@
 		left: -20px;
 		transition: opacity .3s, visibility .3s;
 		padding: 20px;
+		&.js-slide-hidden {
+			@include media('>=tablet') {
+				left: -20px !important;
+				top: 100% !important;
+			}
+		}
 		li {
 			a {
 				font-size: 11px;
