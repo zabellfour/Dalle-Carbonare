@@ -1,0 +1,84 @@
+.default-carousel {
+	margin-bottom: 30px;
+	.slide {
+		position: relative;
+		text-align: center;
+		img {
+			vertical-align: top;
+			width: 100%;
+			height: auto;
+		}
+		.slide-heading {
+			position: absolute;
+			bottom: 0;
+			padding: 30px 10px;
+			background-color: rgba($dark-green, .8);
+			left: 0;
+			right: 0;
+			 @include media('<desktop') {
+					padding: 20px 10px;
+			 
+			 }
+			  @include media('<tablet') {
+			 		padding: 10px;
+			  
+			  }
+			 			
+						
+			h6 {
+				font-family: $base-font-serif;
+				font-size: 18px;
+				font-style: italic;
+			}
+		}
+	}
+	.owl-nav {
+		background-color: $brown;
+		.owl-prev,
+		.owl-next {
+			font-family: 'Carbonare-icons';
+			position: absolute;
+			top: calc( 50% - 65px);
+			width: 44px;
+			height: 130px;
+			left: -22px;
+			font-size: 0;
+			text-align: center;
+			line-height: 130px;
+			transform: rotate(180deg);
+			background-color: $brown;
+			display: block;
+			transition: opacity .4s;
+			opacity: 1;
+			@include media('<desktop') {
+				left: 0;
+			}
+			 @include media('<tablet') {
+					height: 70px;
+					line-height: 70px;
+					width: 25px;
+			 
+			 }
+						
+			&:hover {
+				opacity: .7;
+			}
+			&:before {
+				content: "\e315";
+				font-size: 20px;
+			}
+		}
+		.owl-next {
+			right: -13px;
+			@include media('<desktop') {
+				right: 0;
+			} @include media('<tablet') {
+			
+			 
+			 }
+						
+			left: auto;
+			transform:rotate(0deg);
+		}
+	}
+}

@@ -4,15 +4,26 @@
 	margin: 0 auto;
 	@extend %clearfix;
 }
-.content-holder{
+
+.content-holder {
 	background-size: cover;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	padding-bottom: 80px;
+	@include media('<tablet') {
+		padding-bottom: 40px;
+	}
+	 @include media('<phone') {
+	padding-bottom: 20px;
+	 
+	 }
+			
 }
+
 .resize-active * {
 	transition: none !important;
 }
-.nav-active{
+
+.nav-active {
 	overflow: hidden;
 }

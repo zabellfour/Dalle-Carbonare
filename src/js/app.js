@@ -16,6 +16,15 @@ jQuery(function() {
     initOpenClose();
 });
 
+$(document).ready(function() {
+    $(".owl-carousel").owlCarousel({
+        items: 1,
+        autoplay: true,
+        nav: true,
+        loop: true
+    });
+});
+
 function initOpenClose() {
     jQuery('.link-list .drop-down').openClose({
         activeClass: 'active-drop',
@@ -28,18 +37,18 @@ function initOpenClose() {
 }
 
 function initMobileNav() {
-	jQuery('body').mobileNav({
-		hideOnClickOutside: true,
-		menuActiveClass: 'nav-active',
-		menuOpener: '.nav-opener',
-		menuDrop: '.nav-drop'
-	});
-	jQuery('body').mobileNav({
-  	hideOnClickOutside: true,
-  	menuActiveClass: 'map-active',
-  	menuOpener: '.map-opener',
- 	menuDrop: '.nav-drop'
- });
+    jQuery('body').mobileNav({
+        hideOnClickOutside: true,
+        menuActiveClass: 'nav-active',
+        menuOpener: '.nav-opener',
+        menuDrop: '.nav-drop'
+    });
+    jQuery('body').mobileNav({
+        hideOnClickOutside: false,
+        menuActiveClass: 'map-active',
+        menuOpener: '.map-opener',
+        menuDrop: '.nav-drop'
+    });
 
     jQuery('body').mobileNav({
         hideOnClickOutside: true,
@@ -385,11 +394,11 @@ MarkerLabel.prototype = $.extend(new google.maps.OverlayView(), {
 function initialize() {
     var myLatLng = new google.maps.LatLng(point.lat, point.lng);
     var gmap = new google.maps.Map(document.getElementById('map_canvas'), {
-      zoom: 16,
-      center: myLatLng,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      scrollwheel: true,
-      disableDefaultUI:true
+        zoom: 16,
+        center: myLatLng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        scrollwheel: true,
+        disableDefaultUI: true
     });
     var myMarker = new google.maps.Marker({
         map: gmap,

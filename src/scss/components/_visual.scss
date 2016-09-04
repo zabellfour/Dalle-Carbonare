@@ -46,27 +46,35 @@
 		}
 	}
 	&-static {
-		height: auto;
 		min-height: 0;
-		display: block;
-		position: relative;
-		img{
-			vertical-align: top;	
+		min-height: 500px;
+		background-size: cover;
+		background-position: 50% 50%;
+		@include media('<desktop') {
+			min-height: 350px;
+		}
+		@include media('<tablet') {
+			min-height: 280px;
 		}
 		.visual-header {
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
-			text-align: center;	
+			text-align: center;
 			padding-top: 111px;
-			h1{
-				text-transform: none;	
-				font-size: 70px;	
-				margin-bottom: 15px;	
+			@include media('<tablet') {
+				padding-top: 0;
 			}
-			.small-h2{
-				font-size: 	14px;
+			h1 {
+				text-transform: none;
+				font-size: 70px;
+				margin-bottom: 15px;
+				@include media('<desktop') {
+					font-size: 45px;
+				}
+				@include media('<phone') {
+					font-size: 35px;
+				}
+			}
+			.small-h2 {
+				font-size: 14px;
 				letter-spacing: 6px;
 			}
 		}

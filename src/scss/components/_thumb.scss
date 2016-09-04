@@ -1,8 +1,8 @@
 .thumb-holder {
 	text-align: center;
 	padding: 0 0 50px;
-	margin-bottom:18px;
- 	.heading-holder {
+	margin-bottom: 18px;
+	.heading-holder {
 		position: relative;
 		max-width: 500px;
 		margin: 0 auto 68px;
@@ -30,6 +30,9 @@
 			left: 50%;
 			width: 2px;
 			background-color: $white;
+		}
+		&.no-line:before {
+			display: none;
 		}
 	}
 	.thumb-wrapper {

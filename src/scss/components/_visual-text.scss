@@ -134,6 +134,70 @@
 	}
 }
 
+.visual-white {
+	@extend .visual-large;
+	margin-bottom: 40px;
+	.text-holder {
+		background-color: $white;
+		color: $dark-green;
+		letter-spacing: 0px;
+		p {
+			margin-bottom: 32px;
+		}
+	}
+	h1 {
+		margin-bottom: 21px;
+	}
+	&.btn-abs {
+		position: relative;
+		overflow: visible;
+		margin-bottom: 77px;	
+		 @include media('<tablet') {
+				margin-bottom: 50px;	
+		 
+		 }
+					
+		.text-holder {
+			padding-bottom: 30px;	
+			@include media('<tablet') {
+				position: relative;
+			}
+			.btn {
+				position: absolute;
+				bottom: -30px;
+				right: 41px;
+			}
+			.small-h2 {
+				color: $dark-green;
+			}
+		}
+	}
+}
+
+.visual-brown {
+	@extend .visual-large;
+	margin-bottom: 39px;
+	@include media('<tablet') {
+		flex-direction: column;
+	}
+	h1 {
+		color: $dark-green;
+		margin-bottom: 21px;
+	}
+	.text-holder {
+		background-color: $brown-light;
+		color: $white;
+		letter-spacing: 0.8px;
+		p {
+			margin-bottom: 32px;
+		}
+	}
+	dl {
+		margin-top: 0;
+		margin-bottom: 28px;
+	}
+}
+
 .stroke {
 	position: relative;
 	padding-left: 81px;
@@ -175,7 +239,7 @@
 		font-family: $base-font-serif;
 		font-style: italic;
 		line-height: 1.7;
-		p{
+		p {
 			margin-bottom: 26px;
 		}
 		@include media('<tablet') {
@@ -183,4 +247,35 @@
 			padding: 0;
 		}
 	}
+}
+
+.termine-list {
+	dt,
+	dd {
+		display: inline;
+		margin: 0;
+		@include media('<tablet') {
+			display: block;
+			&:after {
+				white-space: normal;
+				display: none;
+			}
+		}
+	}
+	dd:after {
+		content: '\A';
+		white-space: pre;
+	}
+}
+
+.tarifes {
+	display: block;
+	margin: -8px 0 0;
+	font-weight: 600;
+}
+
+.tarifes-list {
+	@extend %listreset;
+	margin-bottom: 30px;
+	font-weight: 600;
 }
