@@ -25,6 +25,8 @@ $(document).ready(function() {
     });
 });
 
+$(".instrument-box .img-holder img").ezPlus();
+
 function initOpenClose() {
     jQuery('.link-list .drop-down').openClose({
         activeClass: 'active-drop',
@@ -41,7 +43,7 @@ function initMobileNav() {
     jQuery('body').mobileNav({
         hideOnClickOutside: true,
         menuActiveClass: 'nav-active',
-        menuOpener: '.nav-opener',
+        menuOpener: '#header .nav-opener',
         menuDrop: '.nav-drop'
     });
     jQuery('body').mobileNav({

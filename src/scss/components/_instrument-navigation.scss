@@ -1,9 +1,6 @@
 .instrument-navigation {
-
-
-
-	position: relative;z-index: 100;
-	padding: 0 10px;
+	position: relative;
+	z-index: 100;
 	ul {
 		text-transform: uppercase;
 		@extend %listreset;
@@ -11,10 +8,28 @@
 		margin-top: -60px;
 		justify-content: space-between;
 		@include media('<phone') {
-
+			flex-direction: column;
+			flex-wrap: wrap;
+			padding-top: 10px;
+			margin-top: 0;
 		}
 		li {
 			width: 18%;
+			@include media('<tablet') {
+				width: 19.5%;
+			}
+			@include media('<phone') {
+				width: 100%;
+				margin-bottom: 5px;
+			}
+			&.active {
+				a {
+					background-color: $brown;
+				}
+				i:before {
+					content: "\e313";
+				}
+			}
 			a {
 				min-width: 0;
 				width: 100%;
@@ -22,19 +37,31 @@
 				margin-right: 0;
 				font-size: 12px;
 				font-style: normal;
+				transition: background-color 0.3s;
 				font-family: $base-font-serif;
+				&:hover {
+					background-color: #022424;
+					opacity: 1;
+				}
 				@include media('<desktop') {
 					font-size: 12px;
 					padding: 5px 10px;
 				}
 				@include media('<tablet') {
-					font-size: 10px;
+					font-size: 11px;
 					flex-direction: column;
+				}
+				@include media('<phone') {
+					flex-direction: row;
 				}
 				span {
 					@include media('<tablet') {
 						display: block;
 						margin-top: 10px;
+					}
+					@include media('<phone') {
+						display: inline;
+						margin-top: 0;
 					}
 				}
 			}
@@ -42,6 +69,9 @@
 				font-size: 25px;
 				@include media('<desktop') {
 					margin-left: 0;
+				}
+				.active & {
+					color: red;
 				}
 			}
 		}
