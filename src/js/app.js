@@ -35,7 +35,7 @@ function initMobileNav() {
 		menuDrop: '.nav-drop'
 	});
 	jQuery('body').mobileNav({
-  	hideOnClickOutside: true,
+  	hideOnClickOutside: false,
   	menuActiveClass: 'map-active',
   	menuOpener: '.map-opener',
  	menuDrop: '.nav-drop'
