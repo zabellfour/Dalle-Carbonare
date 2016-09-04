@@ -37,6 +37,7 @@ function initOpenClose() {
 }
 
 function initMobileNav() {
+
     jQuery('body').mobileNav({
         hideOnClickOutside: true,
         menuActiveClass: 'nav-active',

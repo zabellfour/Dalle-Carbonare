@@ -36,7 +36,14 @@
             </ul>
             <ul class='link-list'>
               <li><a href="#">Accessoires</a></li>
-              <li><a href="#">Prestations</a></li>
+              <li class="drop-down">
+                <a href="#" class="subnav-drop-opener">Prestations <i class="icon-arrow_down"></i> </a>
+                <ul class="drop-down-content">
+                  <li><a href="#">Prestations1</a></li>
+                  <li><a href="#">Prestations2</a></li>
+                  <li><a href="#">Prestations3</a></li>
+                </ul>
+              </li>
               <li><a href="#">Focus</a></li>
               <li class="active"><a href="#">Contact</a></li>
             </ul>
@@ -44,24 +51,75 @@
         </nav>
       </div>
     </header>
-    <div class="visual" style="background-image: url('build/images/img1.jpg')">
-      <div class="center-holder">
-        <div class="container"> <img src="build/images/logo1.png" alt="ATELIER Dalle Carbonare"></div>
-      </div>
-      <div class="visual-bottom">
-        <div class="container">
-          <div class="header-holder">
-            <a href="#point1" class="scroll-btn"><i class="icon-arrow_down"></i></a>
-            <h1 class="small">depuis plus de 20 ans au service de votre passion</h1>
-          </div>
+   <div class="visual visual-static" style="background-image: url('build/images/img19.jpg');">
+      <div class="container">
+        <div class="visual-header">
+          <h1>L’atelier</h1>
+          <h2 class="small-h2">dalle carbonare</h2>
         </div>
       </div>
     </div>
     <main>
+      <div class="content-holder" id="point1" style="background-image: url(build/images/img2.jpg);">
+        <div class="container">
+          <section class="contact-block">
+            <div class="text-holder">
+              <h1>Contacter <br>notre atelier</h1>
+              <p>Pour toute demande de renseignements complémentaires ou de devis vous pouvez contacter l’Atelier Dalle Carbonare par téléphone, mail ou en remplissanr le formulaire de contact ci-dessous.
+              <br>Ouverture de l’Atelier du Mardi au Vendredi de 14h00 à 18h30 et sur rendez-vous les matins et le samedi.</p>
+              <a href="#" class="btn btn-brown">En savoir plus <i class="icon-arrow_down"></i></a>
+            </div>
+            <div class="contact-info">
+              <span>Luthier Dalle Carbonare</span>
+              <ul>
+                <li> <a href="tel:+330561124646">+33 (0) 5 61 12 46 46</a></li>
+                <li> <a href="tel:+330561125368">+33 (0) 5 61 12 53 68</a></li>
+                <li> <a href="tel:+330616120192">+33 (0) 6 16 12 01 92</a></li>
+                <li> <a href="mailto:&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#118;&#105;&#111;&#108;&#111;&#110;&#045;&#116;&#111;&#117;&#108;&#111;&#117;&#115;&#101;&#046;&#099;&#111;&#109;">&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#118;&#105;&#111;&#108;&#111;&#110;&#045;&#116;&#111;&#117;&#108;&#111;&#117;&#115;&#101;&#046;&#099;&#111;&#109;</a>
+                </li>
+              </ul>
+                <p>7 rue Clémence Isaure
+                 <br>3100 Toulouse - France
+                </p>
+            </div>
+          </section>
+          <section class="contact-form">
+            <form action="#">
+              <div class="contact-body-form">
+                <div class="contact-left-side">
+                  <div class="form-row">
+                    <input type="text" placeholder="Nom, Prénom :">
+                  </div>
+                  <div class="form-row">
+                    <input type="text" placeholder="Nom, Prénom :">
+                  </div>
+                  <div class="form-row">
+                    <input type="text" placeholder="Nom, Prénom :">
+                  </div>
+                  <div class="form-row">
+                    <input type="text" placeholder="Nom, Prénom :">
+                  </div>
+                  <div class="form-row">
+                    <input type="text" placeholder="Nom, Prénom :">
+                  </div>
+                </div>
+                <div class="contact-right-side">
+                  <div class="form-row">
+                     <input type="text" placeholder="Demande">
+                  </div>
+                  <div class="form-row">
+                    <textarea rows="6" cols="40" name="text" placeholder="Message"></textarea>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
       <div class="google-map">
         <div id="map_canvas"></div>
         <div class="map-opener"></div>
-      </div>
+      </div>  
     </main>
     <footer id="footer">
       <div class="container">
