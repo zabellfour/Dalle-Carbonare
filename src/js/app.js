@@ -31,9 +31,16 @@ $(document).ready(function() {
 });
 
 $(".instrument-box .img-holder img").ezPlus({
-
+    zoomType: "inner",
     cursor: 'crosshair',
-    zoomType: "inner"
+    responsive: true,
+             respond: [
+                {
+                    range: '100-900',
+                     enabled: false,
+                }
+               
+            ]
 
 });
 
