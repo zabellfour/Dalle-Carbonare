@@ -44,11 +44,10 @@
 	.img-holder {
 		width: 40%;
 		min-height: 100%;
-		display: flex;	 
-		&:after{
+		display: flex;
+		&:after {
 			content: '';
-			height:100%;
-
+			height: 100%;
 		}
 		@include media('<tablet') {
 			width: 100%;
@@ -56,9 +55,9 @@
 		}
 	}
 	.img-box {
-		display: flex;	
-width: 100%;
-min-height: 100%; 
+		display: flex;
+		width: 100%;
+		min-height: 100%;
 		background-size: cover;
 		background-position: 50% 50%;
 	}
@@ -290,7 +289,7 @@ min-height: 100%;
 	padding-top: 60px;
 	overflow: visible;
 	margin-bottom: 151px;
-	p{
+	p {
 		margin-bottom: 5px;
 	}
 	@include media('<tablet') {
