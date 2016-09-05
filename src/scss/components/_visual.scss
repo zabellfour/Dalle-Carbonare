@@ -50,11 +50,16 @@
 		background-size: cover;
 		background-position: 50% 50%;
 		text-align: center;	
+		width: 100%;
+		align-items: center;	justify-content: center;	
 		@include media('<desktop') {
 			min-height: 350px;
 		}
 		@include media('<tablet') {
 			min-height: 280px;
+		}
+		.container{
+			margin:0;	
 		}
 		.visual-header {
 			text-align: center;

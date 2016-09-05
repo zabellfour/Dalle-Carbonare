@@ -11,9 +11,7 @@
 		width: 23.5%;
 		margin-bottom: 20px;
 		background-color: #a98e5d;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
+		
 		 @include media('<desktop') {
 			width: 32%;
 		 

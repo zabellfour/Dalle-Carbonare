@@ -13,8 +13,12 @@ import HP from './modules/helpers';
 jQuery(function() {
 
     initMobileNav();
-    initOpenClose();
+    initOpenClose();        
     initMap();
+});
+
+$(function() {
+    $('.instrument-box .descr-holder').matchHeight();
 });
 
 $(document).ready(function() {
