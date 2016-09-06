@@ -71,7 +71,7 @@
 		.owl-next {
 			right: -13px;
 			@include media('<desktop') {
-				right: 0;
+				right: 0 !important	;
 			}
 			@include media('<tablet') {}
 			left: auto;
