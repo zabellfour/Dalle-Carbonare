@@ -67,8 +67,8 @@
               <h1>Contacter <br>notre atelier</h1>
               <p>Pour toute demande de renseignements complémentaires ou de devis vous pouvez contacter l’Atelier Dalle Carbonare par téléphone, mail ou en remplissanr le formulaire de contact ci-dessous.
               <br>Ouverture de l’Atelier du Mardi au Vendredi de 14h00 à 18h30 et sur rendez-vous les matins et le samedi.</p>
-              <a href="#" class="btn btn-brown">En savoir plus <i class="icon-arrow_down"></i></a>
-              <a href="#" class="btn btn-bordered btn-bordered-cream">Formulaire <i class="icon-arrow_down"></i></a>
+              <a href="build/docs/fiche-coordonnees.pdf" class="btn btn-brown">Imprimer la fiche <i class="icon-arrow_right"></i></a>
+              <a href="#formulare" class="btn scroll-btn btn-bordered btn-bordered-cream">Formulaire <i class="icon-arrow_down"></i></a>
             </div>
             <div class="contact-info">
               <span>Luthier Dalle Carbonare</span>
@@ -84,7 +84,7 @@
                 </p>
             </div>
           </section>
-          <section class="contact-form">
+          <section id="formulare" class="contact-form">
             <form action="#">
               <div class="contact-head-form">
                 <label>formulaire</label>
@@ -108,13 +108,15 @@
                     <label class="select-arrow" for="select">
                       <i class="icon-arrow_down"></i>
                     </label>
-                    <select name="choose" id="select">
-                      <option value="1">Instrument</option>
-                      <option value="1">Instrument</option>
-                      <option value="1">Instrument</option>
-                      <option value="1">Instrument</option>
-                      <option value="1">Instrument</option>
-                    </select>
+                    <div class="formulare-select">
+                      <select name="choose" id="select">
+                        <option value="1">Instrument</option>
+                        <option value="1">Instrument</option>
+                        <option value="1">Instrument</option>
+                        <option value="1">Instrument</option>
+                        <option value="1">Instrument</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
                 <div class="contact-right-side">
@@ -122,13 +124,15 @@
                     <label class="select-arrow" for="select">
                       <i class="icon-arrow_down"></i>
                     </label>
-                    <select name="choose" id="select">
-                      <option value="1">Demande</option>
-                      <option value="1">Demande</option>
-                      <option value="1">Demande</option>
-                      <option value="1">Demande</option>
-                      <option value="1">Demande</option>
-                    </select>
+                    <div class="formulare-select">
+                      <select name="choose" id="select">
+                        <option value="1">Demande</option>
+                        <option value="1">Demande</option>
+                        <option value="1">Demande</option>
+                        <option value="1">Demande</option>
+                        <option value="1">Demande</option>
+                      </select>
+                    </div>
                   </div>
                   <div class="form-row message-row">
                     <textarea rows="6" cols="40" name="text" placeholder="Message"></textarea>
@@ -199,12 +203,11 @@
     </footer>
   </div>
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false">
-    
-
   </script>
-
   <script src="build/js/vendor.js"></script>
   <script src="build/js/app.js"></script>
+  <script src="build/js/google-map.js"></script>
+
 </body>
 
 </html>
