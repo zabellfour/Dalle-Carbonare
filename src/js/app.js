@@ -30,6 +30,15 @@ $(document).ready(function() {
 });
 
 
+window.screen.orientation.addEventListener('change', function() {
+ 
+    location.reload(true)
+ 
+});
+           
+
+    
+
 $(".instrument-box .img-holder img").ezPlus({
     zoomType: "inner",
     cursor: 'crosshair'

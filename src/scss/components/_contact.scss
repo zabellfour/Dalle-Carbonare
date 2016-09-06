@@ -2,16 +2,16 @@
 	.btn-bordered-cream {
 		min-width: 180px;
 		@include media('<tablet') {
-				margin-left: 0;
-				margin-top: 15px;
-			}
+			margin-left: 0;
+			margin-top: 15px;
+		}
 	}
 	@extend .visual-large;
 	.text-holder {
 		padding-right: 58px;
 		@include media('<=tablet') {
-				padding-right: 38px;
-			}
+			padding-right: 38px;
+		}
 		.btn {
 			@include media('<desktop') {
 				padding-left: 15px;
@@ -75,12 +75,13 @@
 			line-height: 1.2;
 			margin-bottom: 0;
 		}
-	@include media('<tablet') {
+		@include media('<tablet') {
 			width: 100%;
 			padding: 30px 20px 20px;
 		}
 	}
 }
+
 .contact-head-form {
 	padding-top: 60px;
 	background: $cream;
@@ -100,6 +101,7 @@
 		}
 	}
 }
+
 .contact-body-form {
 	display: flex;
 	justify-content: space-between;
@@ -109,16 +111,17 @@
 	color: $dark-green;
 	background: $cream;
 	@include media('<tablet') {
-				padding: 20px 20px 60px 20px;
-				flex-direction: column;
-			}
-	.contact-left-side, .contact-right-side {
+		padding: 20px 20px 60px 20px;
+		flex-direction: column;
+	}
+	.contact-left-side,
+	.contact-right-side {
 		width: 49.4%;
 		display: flex;
 		flex-direction: column;
 		@include media('<tablet') {
-				width: 100%;
-			}
+			width: 100%;
+		}
 		.form-row {
 			display: flex;
 			width: 100%;
@@ -129,6 +132,7 @@
 				line-height: 2;
 				border: none;
 				outline-color: $dark-green;
+				height: 50px;
 			}
 			textarea {
 				padding: 9px 20px;
@@ -136,53 +140,89 @@
 				border: none;
 				outline: none;
 				color: $dark-green;
+				width: 100%;
 			}
 			.formulare-select {
 				width: 100%;
-					select {
+				height: 50px;
+				vertical-align: top;
+				select {
 					width: 100%;
 					height: 50px;
 					padding: 9px 20px;
-				    border: 0;
-				    -webkit-appearance: none;
-				    -moz-appearance: none;
-				    appearance: none;
-				    outline-color: $dark-green;
-				    cursor: pointer;
-					}
-					select::-ms-expand {
+					border: 0;
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					appearance: none;
+					outline-color: $dark-green;
+					cursor: pointer;
+					margin-bottom: 0;	
+				}
+				select::-ms-expand {
 					display: none;
 				}
 			}
-			::-webkit-input-placeholder {color: $dark-green;}
-			::-moz-placeholder {color: $dark-green;}
-			:-moz-placeholder {color: $dark-green;}
-			:-ms-input-placeholder {color: $dark-green;}
-			.input1::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
-			::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
-			:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
-			:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
-			:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
-			:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
-			:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
-			:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+			::-webkit-input-placeholder {
+				color: $dark-green;
+			}
+			::-moz-placeholder {
+				color: $dark-green;
+			}
+			:-moz-placeholder {
+				color: $dark-green;
+			}
+			:-ms-input-placeholder {
+				color: $dark-green;
+			}
+			.input1::-webkit-input-placeholder {
+				opacity: 1;
+				transition: opacity 0.3s ease;
+			}
+			::-moz-placeholder {
+				opacity: 1;
+				transition: opacity 0.3s ease;
+			}
+			:-moz-placeholder {
+				opacity: 1;
+				transition: opacity 0.3s ease;
+			}
+			:-ms-input-placeholder {
+				opacity: 1;
+				transition: opacity 0.3s ease;
+			}
+			:focus::-webkit-input-placeholder {
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			}
+			:focus::-moz-placeholder {
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			}
+			:focus:-moz-placeholder {
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			}
+			:focus:-ms-input-placeholder {
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			}
 		}
 		.select-style {
-				position: relative;
-			}
+			position: relative;
+		}
 		.select-style {
-				label {
+			label {
 				position: absolute;
 				height: 50px;
 				top: 0;
 				right: 20px;
-				pointer-events:none;
+				pointer-events: none;
 				i {
 					font-size: 24px;
 					line-height: 50px;
 				}
 			}
-		} 
+		}
 	}
 	.contact-right-side {
 		.form-row {
@@ -208,5 +248,3 @@
 		}
 	}
 }
-
-
