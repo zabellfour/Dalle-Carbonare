@@ -132,6 +132,7 @@
 	}
 	.btn {
 		margin: -30px 40px 0 0;
+		position: relative;	 
 		@include media('<tablet') {
 			margin: -30px 0 0 20px;
 		}

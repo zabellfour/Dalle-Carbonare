@@ -233,6 +233,9 @@
 
 .drop-down {
 	position: relative;
+	&.active li a:after{
+		display: none;	
+	}
 	&-content {
 		@extend %listreset;
 		opacity: 0;

@@ -13,11 +13,9 @@
 	@include media('<tablet') {
 		padding-bottom: 40px;
 	}
-	 @include media('<phone') {
-	padding-bottom: 20px;
-	 
-	 }
-			
+	@include media('<phone') {
+		padding-bottom: 20px;
+	}
 }
 
 .resize-active * {
@@ -28,10 +26,7 @@
 	overflow: hidden;
 }
 
-#wrapper{
-	overflow: hidden;	
+#wrapper {
+	overflow: hidden;
 	position: relative;
-}
-.zoomContainer{
-	
 }
