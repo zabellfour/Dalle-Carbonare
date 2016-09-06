@@ -3,6 +3,9 @@
     width: 100%;
     height: 550px;
     margin-bottom: 0px;
+    @include media('<tablet') {
+                height: 350px;
+            }
 }
 
 #map_canvas {
@@ -20,7 +23,7 @@
     background: #fff;
     opacity: 0.3;
     z-index: 9999;
-cursor: pointer;
+    cursor: pointer;
 }
 
 .map-active {
