@@ -12,73 +12,84 @@
 		@include media('<=tablet') {
 			padding-right: 38px;
 		}
-		.btn {
-			@include media('<desktop') {
-				padding-left: 15px;
-			}
-			@include media('<tablet') {
-				padding-left: 30px;
-			}
-		}
 	}
-	.contact-info {
-		padding: 130px 60px 60px;
-		height: auto;
-		display: flex;
-		flex-wrap: wrap;
-		align-content: flex-start;
-		width: 40%;
-		color: $dark-green;
-		background: $white;
-		font-family: $base-font-serif;
-		font-size: 18px;
-		span {
-			width: 100%;
-			display: inline-block;
-			position: relative;
-			margin-bottom: 39px;
-			font-size: 24px;
-			line-height: 3.5;
-			letter-spacing: 0.8px;
-			@include media('<=tablet') {
-				line-height: 1.5;
-				margin-bottom: 48px;
-				padding-top: 10px;
-			}
-			&:before {
-				content: '';
-				position: absolute;
-				left: 0;
-				top: 0;
-				height: 3px;
-				width: 30px;
-				background-color: $brown;
-				display: block;
-			}
-		}
-		ul {
-			li {
-				line-height: 1.2;
-			}
-			list-style: none;
-			@extend %listreset;
-			margin-bottom: 48px;
-			@include media('<tablet') {
-				margin-bottom: 15px;
-			}
-			a {
-				color: $dark-green;
-				text-decoration: none;
-			}
-		}
-		p {
-			line-height: 1.2;
-			margin-bottom: 0;
+	.btn {
+		@include media('<desktop') {
+			padding-left: 15px;
 		}
 		@include media('<tablet') {
-			width: 100%;
-			padding: 30px 20px 20px;
+			padding-left: 30px;
+			margin-top: 15px;
 		}
+	}
+}
+
+.contact-info {
+	padding: 130px 60px 60px;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	width: 40%;
+	color: $dark-green;
+	background: $white;
+	font-family: $base-font-serif;
+	font-size: 18px;
+	span {
+		width: 100%;
+		display: inline-block;
+		position: relative;
+		margin-bottom: 39px;
+		font-size: 24px;
+		line-height: 3.5;
+		letter-spacing: 0.8px;
+		@include media('<desktop') {
+			line-height: 1.5;
+			margin-bottom: 48px;
+			padding-top: 10px;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 3px;
+			width: 30px;
+			background-color: $brown;
+			display: block;
+		}
+	}
+	ul {
+		li {
+			line-height: 1.2;
+		}
+		list-style: none;
+		@extend %listreset;
+		margin-bottom: 48px;
+		@include media('<tablet') {
+			margin-bottom: 15px;
+		}
+		a {
+			color: $dark-green;
+			text-decoration: none;
+		}
+	}
+	p {
+		line-height: 1.2;
+		margin-bottom: 0;
+	}
+	@include media('<tablet') {
+		width: 100%;
+		padding: 30px 20px 20px;
+	}
+}
+
+.contact-form {
+	@include media('<tablet') {
+		padding: 0 30px;
+	}
+	@include media('<phone') {
+		padding: 0;
 	}
 }
 
@@ -156,7 +167,7 @@
 					appearance: none;
 					outline-color: $dark-green;
 					cursor: pointer;
-					margin-bottom: 0;	
+					margin-bottom: 0;
 				}
 				select::-ms-expand {
 					display: none;
@@ -242,7 +253,8 @@
 			margin-right: 0;
 			@include media('<tablet') {
 				min-width: 0;
-				width: 120px !important;
+				width: 130px !important;
+				height: 40px;
 				bottom: -40px;
 			}
 		}

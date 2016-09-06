@@ -11,14 +11,14 @@ import HP from './modules/helpers';
 
 
 jQuery(function() {
+
     initMobileNav();
-         
+    initOpenClose();        
 });
 
 $(function() {
     $('.instrument-box .descr-holder').matchHeight();
 });
-
 
 $(document).ready(function() {
     $(".owl-carousel").owlCarousel({
@@ -38,12 +38,23 @@ window.screen.orientation.addEventListener('change', function() {
            
 
     
-
 $(".instrument-box .img-holder img").ezPlus({
     zoomType: "inner",
-    cursor: 'crosshair'
- });
+    cursor: 'crosshair',
+    responsive: true
 
+});
+
+function initOpenClose() {
+    jQuery('.link-list .drop-down').openClose({
+        activeClass: 'active-drop',
+        opener: '.subnav-drop-opener',
+        slider: '.drop-down-content',
+        animSpeed: 300,
+        effect: 'slide',
+        hideOnClickOutside: true
+    });
+}
 
 function initMobileNav() {
 
@@ -353,6 +364,5 @@ function initMobileNav() {
             $.data(this, 'MobileNav', instance);
         });
     };
-
 }(jQuery));
 
