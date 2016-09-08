@@ -1,5 +1,3 @@
-function initMap() {
-
     var point = {
         lat: 43.600827,
         lng: 1.441230
@@ -61,5 +59,3 @@ function initMap() {
         });
 
     }
-    initialize();
-}

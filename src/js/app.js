@@ -12,8 +12,8 @@ import HP from './modules/helpers';
 
 jQuery(function() {
 
-    initMobileNav();
-       
+
+
 });
 
 $(function() {
@@ -30,14 +30,8 @@ $(document).ready(function() {
 });
 
 
-window.screen.orientation.addEventListener('change', function() {
- 
-    location.reload(true)
- 
-});
-           
 
-    
+
 $(".instrument-box .img-holder img").ezPlus({
     zoomType: "inner",
     cursor: 'crosshair',
@@ -46,35 +40,43 @@ $(".instrument-box .img-holder img").ezPlus({
 });
 
 
-function initMobileNav() {
 
-    jQuery('body').mobileNav({
+$(".visual-brown.previw-inside .img-holder  .img-box img").ezPlus({
+    zoomType: "inner",
+    cursor: 'crosshair',
+    responsive: true
+
+});
+
+$(document).ready(function initMobileNav() {
+
+    $(jQuery('body')).mobileNav({
         hideOnClickOutside: true,
         menuActiveClass: 'nav-active',
         menuOpener: '#header .nav-opener',
         menuDrop: '.nav-drop'
     });
-    jQuery('body').mobileNav({
+    $(jQuery('body')).mobileNav({
         hideOnClickOutside: false,
         menuActiveClass: 'map-active',
         menuOpener: '.map-opener',
         menuDrop: '.nav-drop'
     });
 
-    jQuery('body').mobileNav({
+    $(jQuery('body')).mobileNav({
         hideOnClickOutside: true,
         menuActiveClass: 'footer-nav-active',
         menuOpener: '#footer .nav-opener',
         menuDrop: '#footer .nav-drop'
     });
-}
+});
 
 
 
 /*
  * jQuery Open/Close plugin
  */
-;
+
 (function($) {
     function OpenClose(options) {
         this.options = $.extend({
@@ -355,4 +357,3 @@ function initMobileNav() {
         });
     };
 }(jQuery));
-
