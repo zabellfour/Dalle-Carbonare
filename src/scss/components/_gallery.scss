@@ -69,9 +69,10 @@
 			}
 		}
 		.owl-next {
-			right: -13px;
+			right: -13px; 
 			@include media('<desktop') {
 				right: 0 !important	;
+				left: auto;
 			}
 			@include media('<tablet') {}
 			left: auto;
