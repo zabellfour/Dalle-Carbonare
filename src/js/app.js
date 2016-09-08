@@ -13,7 +13,7 @@ import HP from './modules/helpers';
 jQuery(function() {
 
     initMobileNav();
-    initOpenClose();        
+       
 });
 
 $(function() {
@@ -44,6 +44,7 @@ $(".instrument-box .img-holder img").ezPlus({
     responsive: true
 
 });
+
 
 function initMobileNav() {
 

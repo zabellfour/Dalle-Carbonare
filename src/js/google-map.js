@@ -1,3 +1,4 @@
+function initMap() {
 
     var point = {
         lat: 43.600827,
@@ -61,3 +62,4 @@
 
     }
     initialize();
+}
