@@ -1,84 +1,101 @@
 .instrument-list {
-	@extend %listreset;
-	padding-top: 59px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	@include media('<tablet') {
-		justify-content: space-around;
-	}
-	.instrument-box {
-		width: 23.5%;
-		margin-bottom: 20px;
-		background-color: #a98e5d;
-		@include media('<desktop') {
-			width: 32%;
-		}
-		@include media('<tablet') {
-			width: 45%;
-		}
-		@include media('<phone') {
-			width: 80%;
-		}
-		.img-holder {
-			background-color: $white;
-			img {
-				width: 100%;
-				vertical-align: top;
-			}
-		}
-	}
-	.descr-holder {
-		color: $white;
-		padding: 34px 26px 13px;
-		@include media('<desktop') {
-			padding: 30px 15px;
-		}
-		p {
-			margin-bottom: 10px;
-		}
-		h4 { 
-			color: $dark-green;
-			font-size: 24px;
-			line-height: 1.2;
-			padding-right: 15px;
-			margin-bottom: 17px;
-		}
-	}
-	.watch-holder {
-		background-color: #9e8659;
-		padding: 0 0 0 0;
-		position: relative;
-		transition: background-color 0.5s;
-		&:hover {
-			background-color: $dark-green;
-			.btn-watch {
-				background-color: #9e8659;
-			}
-		}
-		a {
-			padding-left: 20px;
-			display: block;
-			text-decoration: none;
-		}
-		.add-info {
-			padding: 18px 0;
-			display: block;
-		}
-		.btn-watch {
-			transition: background-color 0.3s;
-			background-color: $dark-green;
-			color: $white;
-			font-size: 39px;
-			width: 60px;
-			position: absolute;
-			right: 0;
-			top: 0;
-			bottom: 0;
-			text-decoration: none;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-	}
+    @extend %listreset;
+    padding-top: 59px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include media('<tablet') {
+        justify-content: space-around;
+    }
+    .instrument-box {
+        width: 23.5%;
+        margin-bottom: 20px;
+        background-color: #a98e5d;
+        @include media('<desktop') {
+            width: 32%;
+        }
+        @include media('<tablet') {
+            width: 45%;
+            margin-bottom: 40px;
+        }
+        @include media('<phone') {
+            width: 80%;
+        }
+        .img-holder {
+            background-color: $white;
+            @include media('<tablet') {
+                text-align: center;
+            }
+            img {
+                width: 100%;
+                vertical-align: top;
+                @include media('<tablet') {
+                    width: 60%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+    .descr-holder {
+        color: $white;
+        padding: 34px 26px 13px;
+        @include media('<desktop') {
+            padding: 30px 15px;
+        }
+        @include media('<tablet') {
+            padding: 10px 10px 5px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        h4 {
+            color: $dark-green;
+            font-size: 24px;
+            line-height: 1.2;
+            padding-right: 15px;
+            margin-bottom: 17px;
+            @include media('<tablet') {
+                font-size: 20px;
+            }
+        }
+    }
+    .watch-holder {
+        background-color: #9e8659;
+        padding: 0 0 0 0;
+        position: relative;
+        transition: background-color 0.5s;
+        &:hover {
+            background-color: $dark-green;
+            .btn-watch {
+                background-color: #9e8659;
+            }
+        }
+        a {
+            padding-left: 20px;
+            display: block;
+            text-decoration: none;
+        }
+        .add-info {
+            padding: 18px 0;
+            display: block;
+            @include media('<tablet') {
+                padding: 12px 0;
+            }
+        }
+        .btn-watch {
+            transition: background-color 0.3s;
+            background-color: $dark-green;
+            color: $white;
+            font-size: 39px;
+            width: 60px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
 }

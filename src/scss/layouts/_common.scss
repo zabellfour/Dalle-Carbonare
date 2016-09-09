@@ -1,32 +1,56 @@
 .container {
-	max-width: 960px;
-	padding: 0 10px;
-	margin: 0 auto;
-	@extend %clearfix;
+    max-width: 960px;
+    padding: 0 10px;
+    margin: 0 auto;
+    @extend %clearfix;
 }
 
 .content-holder {
-	background-size: cover;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	padding-bottom: 80px;
-	@include media('<tablet') {
-		padding-bottom: 40px;
-	}
-	@include media('<phone') {
-		padding-bottom: 20px;
-	}
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    padding-bottom: 80px;
+    @include media('<tablet') {
+        padding-bottom: 40px;
+    }
+    @include media('<phone') {
+        padding-bottom: 20px;
+    }
 }
 
 .resize-active * {
-	transition: none !important;
+    transition: none !important;
 }
 
 .nav-active {
-	overflow: hidden;
+    overflow: hidden;
 }
 
 #wrapper {
-	overflow: hidden;
-	position: relative;
+    overflow: hidden;
+    position: relative;
+}
+
+.mobile-indent {
+    @include media('<tablet') {
+        padding-top: 50px;
+    }
+    @include media('<phone') {
+        padding-top: 40px;
+    }
+}
+
+.zoomContainer{
+	 @include media('<desktop') {
+		display: none !important;
+	 
+	 }
+			
+}
+
+.js-tab-hidden {
+    display:block !important;
+    left:-9999px !important;
+    position: absolute !important;
+    top:-9999px !important;
 }

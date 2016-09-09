@@ -8,9 +8,10 @@
 		margin: 0 auto 68px;
 		@include media('<desktop') {
 			margin-bottom: 40px;
+
 		}
 		@include media('<tablet') {
-			margin-bottom: 10px;
+			margin-bottom: 45px;
 		}
 		h3 {
 			padding-top: 23px;
@@ -90,6 +91,12 @@
 		}
 		.img-holder {
 			position: relative;
+			 @include media('<tablet') {
+					max-height: 200px;
+					overflow: hidden;
+			 
+			 }
+					
 			&:after {
 				content: '';
 				position: absolute;
@@ -106,7 +113,7 @@
 			}
 		}
 		.text-holder {
-			padding: 35px 29px 22px;
+			padding: 35px 53px 22px;
 			@include media('<desktop') {
 				padding: 20px 20px;
 			}
